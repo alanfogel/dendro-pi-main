@@ -1,0 +1,21 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+
+# IDE/editor configs
+.idea/
+.vscode/
+
+# Output folders and runtime data
+pictures/
+
+# Old or temporary files
+*.pdf
+*.bak
+cron_commands
+README_OLD.md
+upload-to-dropbox_OLD.sh
+wpa_supplicant.conf
