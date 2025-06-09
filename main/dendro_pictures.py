@@ -5,6 +5,8 @@ import time
 from datetime import datetime
 
 PICTURES_PATH = r"/home/madlab/dendro-pi-main/pictures/"
+os.makedirs(PICTURES_PATH, exist_ok=True)
+os.chdir(PICTURES_PATH)
 CAMERA_NAME = "DorvalTest"  # Edit this to change name picture file
 
 def get_filename():

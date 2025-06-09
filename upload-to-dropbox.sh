@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Upload pictures ---
-cd ~/Dropbox-Uploader
+cd ~/dendro-pi-main/Dropbox-Uploader
 ./dropbox_uploader.sh upload ~/dendro-pi-main/pictures/* / | grep "file exists with the same hash" > already_uploaded.txt
 
 while IFS= read -r line; do

@@ -12,6 +12,7 @@ This project sets up a Raspberry Pi to monitor dendrometers and take periodic im
    - **Device**: Raspberry Pi Zero
    - **OS**: Raspberry Pi OS 32-bit (Bookworm)
    - **Storage**: Select Storage (Mass Storage Device USB Device)
+   ### - Edit settings
    - **Hostname**: e.g., `Dorval-8`
    - **Username/Password** (To log into the Pi): `madlab` / `______`
    - **Wi-Fi SSID/Password**: `new_aspen_2022` / `___________`
@@ -30,15 +31,21 @@ This project sets up a Raspberry Pi to monitor dendrometers and take periodic im
 2. Open terminal (or PowerShell) and SSH into your Pi:
    ```bash
    ssh madlab@Dorval-8.local # ssh username@{hostname}.local
+   ```
+   if cannot resolve the hostname, use the IP address:
+   ```bash
+   nslookup Dorval-8.local # to find the IP address
+   ssh madlab@{IP_ADDRESS} # ssh username@{IP_ADDRESS}
+   ```
 3. Run:
     ```bash
     sudo raspi-config
     ```
-    - Set timezone under Localization
+    - Set timezone under Localization Options
     - Reboot the Pi
 4. After reboot, SSH in again and test the camera:
    ```bash
-   raspicam -o test.jpg
+   rpicam-jpeg -o test.jpg
    ```
    - If not found, install:
    ```bash
@@ -50,7 +57,7 @@ This project sets up a Raspberry Pi to monitor dendrometers and take periodic im
 
 1. Clone the project (eventually this repo):
 ````bash
-git clone https://github.com/YOUR-ORG/dendro-pi-main.git
+git clone https://github.com/alanfogel/dendro-pi-main.git
 cd dendro-pi-main
 ````
 2. Enter test folder and try:
@@ -58,7 +65,7 @@ cd dendro-pi-main
 cd test
 python test_dendro.py
 ```
-3. Edit your camera name in main/dendro_pictures.py on this line: ```CAMERA_NAME = "ADD NAME HERE"```
+3. Edit your camera name in main/dendro_pictures.py on this line: ```CAMERA_NAME = "DorvalTest"```
 - (Replace `Dorval-8_` with your camera name):
 ```python
 CAMERA_NAME = "Dorval-8_" # the trailing underscore is important for namining the files
@@ -78,12 +85,9 @@ sudo chmod +x dropbox_uploader.sh
 -	Under the settings tab - Scroll down and you will find the “App key” and “App secret”, note down them and return back to the terminal
 -	In the terminal enter the codes when promted, (when you enter the “App secret”, then it will give you a link, visiting it, you will get the “Access code”), once all the information is provided you will link with your dropbox cloud.
 
-Use:
-- Email: Mad.lab.usask@gmail.com
-- Password: __________
-
 2. Update upload-to-dropbox.sh:
 ```bash
+cd ..
 nano upload-to-dropbox.sh
 ```
 Modify the upload line (Replace `Dorval-8` with your Dropbox folder name):
@@ -103,17 +107,25 @@ dos2unix upload-to-dropbox.sh
 crontab -e
 ```
 
-2. If it's not empty, run:
+2. Check if its empty:
+```bash
+crontab -l
+```
+3. If it's not empty, run:
 ```bash
 crontab -r
 ```
-3. Install scheduled jobs:
+4. Install scheduled jobs:
 ```bash
 sh add_cron.sh
 ```
-4. Confirm:
+5. Confirm:
 ```bash
 crontab -l
+```
+6. You can edit the crontab file to change the schedule (like staggering the uploads):
+```bash
+crontab -e
 ```
 
 ## ✅ Test Setup
