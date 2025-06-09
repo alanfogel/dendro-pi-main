@@ -1,6 +1,9 @@
 # 🌲 Dendro-Pi Monitoring System
 
 This project sets up a Raspberry Pi to monitor dendrometers and take periodic images, then uploads data to Dropbox for long-term analysis at research sites.
+My other projects that build on this initial setup:
+- [https://github.com/alanfogel/Pi_ChargeController]
+- []
 
 ---
 
