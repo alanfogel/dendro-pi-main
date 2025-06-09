@@ -70,6 +70,9 @@ python test_dendro.py
 ```
 3. Edit your camera name in main/dendro_pictures.py on this line: ```CAMERA_NAME = "DorvalTest"```
 - (Replace `Dorval-8_` with your camera name):
+```bash
+nano main/dendro_pictures.py
+```
 ```python
 CAMERA_NAME = "Dorval-8_" # the trailing underscore is important for namining the files
 ```
@@ -139,7 +142,7 @@ python dendro_pictures.py
 
 # Upload pictures
 cd ..
-sh upload-to-dropbox.sh
+bash upload-to-dropbox.sh
 ```
 - Check Dropbox for uploaded files.
 
