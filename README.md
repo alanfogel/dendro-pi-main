@@ -1,9 +1,12 @@
 # 🌲 Dendro-Pi Monitoring System
 
 This project sets up a Raspberry Pi to monitor dendrometers and take periodic images, then uploads data to Dropbox for long-term analysis at research sites.
+
 My other projects that build on this initial setup:
 - [https://github.com/alanfogel/Pi_ChargeController]
 - []
+
+The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 3:00 PM, and 6:00 PM every day, and upload the pictures each night to a Dropbox folder named after the Pi's hostname (e.g., `Dorval-8`).
 
 ---
 
