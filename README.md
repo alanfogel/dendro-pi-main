@@ -74,6 +74,7 @@ python test_dendro.py
 3. Edit your camera name in main/dendro_pictures.py on this line: ```CAMERA_NAME = "DorvalTest"```
 - (Replace `Dorval-8_` with your camera name):
 ```bash
+cd ..
 nano main/dendro_pictures.py
 ```
 ```python
