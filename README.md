@@ -85,7 +85,7 @@ CAMERA_NAME = "Dorval-8_" # the trailing underscore is important for namining th
 
 1. In the root project directory ```~/dendro-pi-main/```:
 ```bash
-git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
+git clone https://github.com/alanfogel/Dropbox-Uploader.git
 cd Dropbox-Uploader
 sudo chmod +x dropbox_uploader.sh
 ./dropbox_uploader.sh
