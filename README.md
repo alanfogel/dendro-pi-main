@@ -61,7 +61,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
 
 ## 📦 Installing dendro-pi Scripts
 
-1. Clone the project (eventually this repo):
+1. Clone the project:
 ````bash
 git clone https://github.com/alanfogel/dendro-pi-main.git
 cd dendro-pi-main
