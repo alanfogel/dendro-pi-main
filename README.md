@@ -15,7 +15,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
 1. Insert SD card into your computer.
 2. Download and open [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 3. Configure with the following:
-   - **Device**: Raspberry Pi Zero
+   - **Device**: Raspberry Pi Zero ***(Not Zero 2 W)***
    - **OS**: Raspberry Pi OS 32-bit (Bookworm)
    - **Storage**: Select Storage (Mass Storage Device USB Device)
    ### - Edit settings
