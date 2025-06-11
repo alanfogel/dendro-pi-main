@@ -15,7 +15,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
 1. Insert SD card into your computer.
 2. Download and open [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 3. Configure with the following:
-   - **Device**: Raspberry Pi Zero
+   - **Device**: Raspberry Pi Zero ***(Not Zero 2 W)***
    - **OS**: Raspberry Pi OS 32-bit (Bookworm)
    - **Storage**: Select Storage (Mass Storage Device USB Device)
    ### - Edit settings
@@ -88,6 +88,8 @@ CAMERA_NAME = "Dorval-8_" # the trailing underscore is important for namining th
 git clone https://github.com/alanfogel/Dropbox-Uploader.git
 cd Dropbox-Uploader
 sudo chmod +x dropbox_uploader.sh
+```
+```bash
 ./dropbox_uploader.sh
 ```
 - At the end of the output of the above command, it will ask for the “App key”
