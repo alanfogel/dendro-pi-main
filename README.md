@@ -88,6 +88,8 @@ CAMERA_NAME = "Dorval-8_" # the trailing underscore is important for namining th
 git clone https://github.com/alanfogel/Dropbox-Uploader.git
 cd Dropbox-Uploader
 sudo chmod +x dropbox_uploader.sh
+```
+```bash
 ./dropbox_uploader.sh
 ```
 - At the end of the output of the above command, it will ask for the “App key”
