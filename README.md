@@ -69,7 +69,7 @@ cd dendro-pi-main
 2. Enter test folder and try:
 ```bash
 cd test
-python test_dendro.py
+python test_camera.py
 ```
 3. Edit your camera name in main/dendro_pictures.py on this line: ```CAMERA_NAME = "DorvalTest"```
 - (Replace `Dorval-8_` with your camera name):
@@ -127,7 +127,7 @@ crontab -l
 ```bash
 crontab -r
 ```
-4. Install scheduled jobs:
+4. Install scheduled jobs: **TODO: FIX ADD_CRON.sh**
 ```bash
 sh add_cron.sh
 ```

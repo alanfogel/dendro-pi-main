@@ -35,12 +35,24 @@ def take_picture():
 
     picam2.close()
 
+# Potential improvement - Hopefully will auto-select max resolution
+# def take_picture():
+#     picam2 = Picamera2()
 
-# def setup_camera(camera):
-#    camera.resolution = (2592, 1944)
-#    camera.start_preview()
-#    time.sleep(2)  # Camera warm-up time
+#     # Let Picamera2 auto-select max resolution
+#     capture_config = picam2.create_still_configuration()
+#     picam2.configure(capture_config)
 
+#     picam2.start()
+#     time.sleep(2)
+
+#     file_name = get_filename()
+    
+#     # Capture the file
+#     os.chdir(PICTURES_PATH)
+#     picam2.capture_file(file_name + ".jpeg")
+
+#     picam2.close()
 
 if __name__ == '__main__':
     take_picture()
