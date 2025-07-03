@@ -102,9 +102,9 @@ sudo chmod +x dropbox_uploader.sh
 cd ..
 nano upload-to-dropbox.sh
 ```
-Modify the upload line (Replace `Dorval-8` with your Dropbox folder name):
+Modify the variable declaration line (Replace `Dorval-8` with your Dropbox folder name):
 ```bash
-./dropbox_uploader.sh upload ~/dendro-pi-main/pictures/* /Dorval-8/ | grep "file exists with the same hash" > already_uploaded.txt
+DROPBOX_PATH="/Dorval-8/"
 ```
 
 3. Ensure UNIX line endings:
