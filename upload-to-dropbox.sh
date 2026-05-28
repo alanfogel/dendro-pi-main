@@ -2,7 +2,6 @@
 
 PICTURES_DIR=~/dendro-pi-main/pictures
 LOG_FILE=~/dendro-pi-main/logs/error_log.txt
-UPLOAD_LOG=~/dendro-pi-main/logs/upload_error_log.txt
 DROPBOX_PATH="/Dorval-8/"
 
 # --- Upload pictures ---
@@ -18,6 +17,6 @@ done < already_uploaded.txt
 if [ -s "$LOG_FILE" ]; then
   ./dropbox_uploader.sh upload "$LOG_FILE" "$DROPBOX_PATH" || {
     TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-    echo "[$TIMESTAMP] Failed to upload error_log.txt" >> "$UPLOAD_LOG"
+    echo "[$TIMESTAMP] Failed to upload error_log.txt" >> "$LOG_FILE"
   }
 fi

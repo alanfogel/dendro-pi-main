@@ -112,6 +112,13 @@ DROPBOX_PATH="/Dorval-8/"
 dos2unix upload-to-dropbox.sh
 ```
 
+## 📝 Centralized Error Logging
+
+Run the logging installer to set up system‑wide error and event logging:
+
+```bash
+cd logging
+./install.sh
 
 ## 🕓 Setup Crontab
 1. Open crontab and save immediately:

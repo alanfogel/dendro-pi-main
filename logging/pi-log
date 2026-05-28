@@ -1,0 +1,6 @@
+#!/bin/bash
+# Usage: pi-log <event_type> <message>
+YEAR=$(date +%Y)
+LOG_FILE="/var/log/error-log_${YEAR}"
+mkdir -p "$(dirname "$LOG_FILE")"
+echo "$(date -Iseconds) | $(hostname) | $1 | $2" >> "$LOG_FILE"
