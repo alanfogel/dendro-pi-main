@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PICTURES_DIR=~/dendro-pi-main/pictures
-LOG_FILE=~/dendro-pi-main/logs/error_log.txt
 DROPBOX_PATH="/Dorval-8/"
 
 # --- Upload pictures ---
@@ -13,10 +12,8 @@ while IFS= read -r line; do
   rm "$FILENAME"
 done < already_uploaded.txt
 
-# --- Attempt to upload error log if it exists and is not empty ---
-if [ -s "$LOG_FILE" ]; then
-  ./dropbox_uploader.sh upload "$LOG_FILE" "$DROPBOX_PATH" || {
-    TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-    echo "[$TIMESTAMP] Failed to upload error_log.txt" >> "$LOG_FILE"
-  }
+# --- Log any upload failure (using unified logging) ---
+# The dropbox_uploader.sh returns non-zero on failure
+if [ $? -ne 0 ]; then
+    /usr/local/bin/pi-log "error" "Picture upload failed"
 fi

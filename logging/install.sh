@@ -11,8 +11,8 @@ sudo cp pi-log /usr/local/bin/
 sudo chmod +x /usr/local/bin/pi-log
 
 # 2. Create log file and set ownership
-sudo touch /var/log/error-log_$(date +%Y)
-sudo chown $USER:$USER /var/log/error-log_$(date +%Y)
+sudo touch /var/log/error-log_$(date +%Y).csv
+sudo chown $USER:$USER /var/log/error-log_$(date +%Y).csv
 
 # 3. Create ~/bin if needed, and copy helper scripts
 mkdir -p ~/bin
@@ -40,4 +40,4 @@ rm "$TEMP_CRON"
 echo "Testing pi-log..."
 /usr/local/bin/pi-log "install" "Logging setup complete"
 
-echo "Installation done. Check with: cat /var/log/error-log_$(date +%Y)"
+echo "Installation done. Check with: cat /var/log/error-log_$(date +%Y).csv"

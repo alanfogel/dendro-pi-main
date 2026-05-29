@@ -118,30 +118,32 @@ Run the logging installer to set up system‑wide error and event logging:
 ```bash
 cd logging
 ./install.sh
+```
+
+Confirm logging was added to the crontab with:
+```bash
+crontab -l
+```
+
+And then go up a directory to continue the setup
+```bash
+cd ..
+```
 
 ## 🕓 Setup Crontab
 1. Open crontab and save immediately:
 ```bash
 crontab -e
 ```
-
-2. Check if its empty:
-```bash
-crontab -l
-```
-3. If it's not empty, run:
-```bash
-crontab -r
-```
-4. Install scheduled jobs: **TODO: FIX ADD_CRON.sh**
+2. Install scheduled jobs: **TODO: FIX ADD_CRON.sh**
 ```bash
 sh add_cron.sh
 ```
-5. Confirm:
+3. Confirm:
 ```bash
 crontab -l
 ```
-6. You can edit the crontab file to change the schedule (like staggering the uploads):
+4. You can edit the crontab file to change the schedule (like staggering the uploads):
 ```bash
 crontab -e
 ```
