@@ -16,7 +16,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
 2. Download and open [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 3. Configure with the following:
    - **Device**: Raspberry Pi Zero ***(Not Zero 2 W)***
-   - **OS**: Raspberry Pi OS 32-bit (Bookworm)
+   - **OS**: Raspberry Pi OS (Legacy, 32-bit) (Bookworm)
    - **Storage**: Select Storage (Mass Storage Device USB Device)
    ### - Edit settings
    - **Hostname**: e.g., `Dorval-8`
@@ -24,8 +24,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
    - **Wi-Fi SSID/Password**: `new_aspen_2022` / `___________`
    - **Country**: CA
    - **Enable SSH**: Use password authentication
-4. Save
-    - Apply OS Customization Settings: Yes
+4. Write
 
 5. When done, insert the SD card into your Pi and power it up.
 
