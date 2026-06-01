@@ -117,6 +117,7 @@ Run the logging installer to set up system‑wide error and event logging:
 
 ```bash
 cd logging
+sudo chmod +x install.sh
 ./install.sh
 ```
 
@@ -157,6 +158,9 @@ python dendro_pictures.py
 # Upload pictures
 cd ..
 bash upload-to-dropbox.sh
+
+# Test uploading error-log
+/home/madlab/bin/upload_error_log.sh
 ```
 - Check Dropbox for uploaded files.
 
