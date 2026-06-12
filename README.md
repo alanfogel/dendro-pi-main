@@ -1,4 +1,4 @@
-# 🌲 Dendro-Pi Monitoring System
+# Base Raspberry Pi Setup: Camera Imaging, SSH, Crontab & Dropbox Upload
 
 This project sets up a Raspberry Pi to monitor dendrometers and take periodic images, then uploads data to Dropbox for long-term analysis at research sites.
 
