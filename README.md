@@ -26,7 +26,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
    - **Enable SSH**: Use password authentication
 4. Write
 
-5. When done, insert the SD card into your Pi and power it up.
+5. When done, insert the SD card into your Pi and power it up. *(First bootup takes a couple minutes to connect to wifi)*
 
 ---
 
@@ -42,6 +42,7 @@ The default behaviour of this system is to take a picture at 9:00 AM, 12:00 PM, 
    nslookup Dorval-8.local # to find the IP address
    ssh madlab@{IP_ADDRESS} # ssh username@{IP_ADDRESS}
    ```
+   *If `nslookup` doesn't work, check the wifi router for a list of connected devices, it should show the IP there. Otherwise you can use other programs like Angry IP Scanner that might help you find the IP address.*
 3. Run:
     ```bash
     sudo raspi-config
@@ -105,6 +106,7 @@ Modify the variable declaration line (Replace `Dorval-8` with your Dropbox folde
 ```bash
 DROPBOX_PATH="/Dorval-8/"
 ```
+*Save and Exit (ctrl+s and ctrl+x)*
 
 3. Ensure UNIX line endings:
 ```bash
@@ -136,6 +138,8 @@ cd ..
 ```bash
 crontab -e
 ```
+*If asked to select an editor, I select Nano*
+
 2. Install scheduled jobs: **TODO: FIX ADD_CRON.sh**
 ```bash
 sh add_cron.sh
